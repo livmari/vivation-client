@@ -1,8 +1,11 @@
+import type { FC } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.sass'
 
-export default function Home() {
+import styles from '@styles/Home.module.sass'
+
+const Home:FC = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -67,3 +70,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
