@@ -15,7 +15,12 @@ const SectionHero: FC<SectionHeroProps> = ({ heroText }) => {
         label={'Meny' /* TODO: make translatable */}
       />
 
-      <Image src={'/images/home1.jpeg'} height={1000} width={1000} alt={'Lakshmi smiling on the beach.'} />
+      <Image
+        src={'/images/home1.jpeg'}
+        height={1000}
+        width={1000}
+        alt={'Lakshmi smiling on the beach.'}
+      />
 
       <div>
         <h2>Finn ditt inre lugn</h2>
