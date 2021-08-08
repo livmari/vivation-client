@@ -1,7 +1,16 @@
 @use 'abstracts/breakpoints'
 
+$tiny-gap: 132px
+$medium-gap: 160px
+$large-gap: 200px
+
 .homePage
+  padding-bottom: $tiny-gap
+  display: grid
+  grid-gap: $tiny-gap
   @media only screen and (min-width: breakpoints.$md)
-    padding-bottom: 160px
-    display: grid
-    grid-gap: 160px
+    padding-bottom: $medium-gap
+    grid-gap: $medium-gap
+  @media only screen and (min-width: breakpoints.$lg)
+    padding-bottom: $large-gap
+    grid-gap: $large-gap
