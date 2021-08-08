@@ -1,0 +1,12 @@
+@use 'styles/abstracts/breakpoints'
+
+$tiny-whitespace: 32px
+
+@mixin base
+  margin: 0 auto
+  padding-left: $tiny-whitespace
+  padding-right: $tiny-whitespace
+  max-width: 660px
+
+  @media only screen and (min-width: breakpoints.$lg)
+    max-width: 720px

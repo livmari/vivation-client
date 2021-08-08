@@ -41,3 +41,8 @@ $rose-600: #e11d48
 $rose-700: #be123c
 $rose-800: #9f1239
 $rose-900: #881337
+
+@mixin text-gradient
+  background: -webkit-linear-gradient(45deg, $purple-900, $purple-400 50%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
