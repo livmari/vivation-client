@@ -1,4 +1,46 @@
+@use 'styles/abstracts/breakpoints'
 @use 'styles/layout/container'
 
+
 .appFooter
+  padding-bottom: 46px
+  display: grid
+  grid-gap: 40px
   @include container.base
+  @media only screen and (min-width: breakpoints.$md)
+    grid-template-columns: 1fr 1fr
+
+
+a.brand
+  cursor: pointer
+
+
+.buttonContainer
+  @media only screen and (min-width: breakpoints.$md)
+    display: flex
+    align-items: flex-start
+    justify-content: flex-end
+
+
+.contactInfoList
+  @media only screen and (min-width: breakpoints.$sm)
+    li
+      display: inline-block
+      margin-right: 54px
+    li:last-child
+      margin-right: 0
+  @media only screen and (min-width: breakpoints.$md)
+    grid-column: 1 / span 2
+
+
+
+.socialMediaList
+  li
+    margin-right: 24px
+    display: inline-block
+  @media only screen and (min-width: breakpoints.$md)
+    grid-column: 1 / span 2
+    li
+      margin-right: 36px
+  li:last-child
+    margin-right: 0
