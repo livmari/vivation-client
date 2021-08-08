@@ -1,0 +1,38 @@
+@mixin transition-none
+  transition-property: none
+
+
+@mixin transition-all
+  transition-property: all
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms
+
+
+@mixin transition
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms
+
+
+@mixin transition-colors
+  transition-property: background-color, border-color, color, fill, stroke
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms
+
+
+@mixin transition-opacity($duration: 150ms)
+  transition-property: opacity
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: $duration
+
+
+@mixin transition-shadow
+  transition-property: box-shadow
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms
+
+
+@mixin transforms
+  transition-property: transform
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms

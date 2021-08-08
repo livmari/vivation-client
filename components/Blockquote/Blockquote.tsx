@@ -3,9 +3,9 @@ import type { FC } from 'react'
 import type { BlockquoteProps } from './Blockquote.props'
 import styles from './Blockquote.module.sass'
 
-const Blockquote: FC<BlockquoteProps> = ({ quote, cite }) => {
+const Blockquote: FC<BlockquoteProps> = ({ id, classes, quote, cite }) => {
   return (
-    <blockquote className={styles.container}>
+    <blockquote id={id ?? ''} className={[styles.container, classes].join(' ')}>
       <q className={styles.quote}>{quote}</q>
 
       <cite className={styles.cite}>- {cite}</cite>
