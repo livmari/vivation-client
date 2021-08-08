@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import { getStrapiCollection, getStrapiSingleType } from '@helpers/strapi'
 import {
   SectionHero,
-  SectionInfo,
+  SectionCallout,
   SectionTestimonials,
 } from '@components/pages/home'
 import type {
@@ -21,7 +21,7 @@ const Home: FC<Props> = ({ heroText, testimonials }) => {
       <SectionHero heroText={heroText} />
 
       <main>
-        <SectionInfo />
+        <SectionCallout />
 
         <SectionTestimonials testimonials={testimonials} />
       </main>
