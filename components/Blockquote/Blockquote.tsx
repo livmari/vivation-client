@@ -1,16 +1,14 @@
 import type { FC } from 'react'
 
-interface BlockquoteProps {
-  quote: string
-  cite: string
-}
+import type { BlockquoteProps } from './Blockquote.props'
+import styles from './Blockquote.module.sass'
 
 const Blockquote: FC<BlockquoteProps> = ({ quote, cite }) => {
   return (
-    <blockquote>
-      <q>{quote}</q>
+    <blockquote className={styles.container}>
+      <q className={styles.quote}>{quote}</q>
 
-      <cite>- {cite}</cite>
+      <cite className={styles.cite}>- {cite}</cite>
     </blockquote>
   )
 }
