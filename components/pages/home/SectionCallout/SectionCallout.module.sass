@@ -1,9 +1,8 @@
 @use 'styles/abstracts/breakpoints'
-@use 'styles/abstracts/transition'
 @use 'styles/layout/container'
 
 
-.sectionTestimonials
+.sectionCallout
   @media only screen and (min-width: breakpoints.$md)
     display: grid
     grid-template-columns: 1fr 1fr
@@ -15,26 +14,21 @@
 
 .imageContainer
   height: 60vh
-  padding-left: container.$tiny-whitespace
+  padding-right: container.$tiny-whitespace
   @media only screen and (min-width: breakpoints.$sm)
-    padding-left: container.$tiny-whitespace * 1.2
+    padding-right: container.$tiny-whitespace * 1.2
   @media only screen and (min-width: breakpoints.$md)
-    padding-left: 0
+    padding-right: 0
     height: 435px
-    grid-column: 2 / span 1
 
 
 .image
   height: 100%
   width: 100%
-  border-radius: 200px 0 0 100px
+  border-radius: 0 100px 200px 0
   @media only screen and (min-width: breakpoints.$lg)
     border-radius: 40px
 
-
-.blockquote
-  @include transition.transition-opacity(500ms)
-  @media only screen and (min-width: breakpoints.$md)
-    grid-row: 1 / span 1
+.callout
   @media only screen and (max-width: breakpoints.$lg - 1)
     @include container.base

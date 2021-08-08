@@ -1,0 +1,55 @@
+@use 'styles/abstracts/breakpoints'
+@use 'styles/layout/container'
+
+.sectionHero
+  display: grid
+  grid-template-columns: 1fr 5fr
+  grid-gap: 80px 20px
+  align-items: start
+  justify-content: start
+  @media only screen and (min-width: breakpoints.$sm)
+    grid-template-columns: 1fr 4.5fr
+  @media only screen and (min-width: breakpoints.$lg)
+    @include container.base
+    grid-template-columns: 1fr 1fr
+    grid-gap: 60px
+
+
+.buttonContainer
+  padding-left: container.$tiny-whitespace
+  align-self: start
+  @media only screen and (min-width: breakpoints.$sm)
+    justify-self: end
+  @media only screen and (min-width: breakpoints.$lg)
+    padding-left: 0
+    justify-self: start
+
+
+.imageContainer
+  height: 60vh
+  width: 100%
+  grid-column: 2 / span 4
+  @media only screen and (min-width: breakpoints.$sm)
+    grid-column: 2 / span 3.5
+  @media only screen and (min-width: breakpoints.$lg)
+    height: 80vh
+    grid-column: 2 / span 1
+    grid-row: 1 / span 2
+
+
+.image
+  height: 100%
+  width: 100%
+  border-radius: 0 0 0 200px
+  @media only screen and (min-width: breakpoints.$md)
+    border-radius: 0 0 0 300px
+  @media only screen and (min-width: breakpoints.$lg)
+    border-radius: 0 0 40px 40px
+
+
+.textContainer
+  grid-column: 1 / span 5
+  @media only screen and (max-width: breakpoints.$lg - 1)
+    @include container.base
+  @media only screen and (min-width: breakpoints.$lg)
+    grid-column: 1 / span 1

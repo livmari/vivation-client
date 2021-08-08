@@ -20,11 +20,9 @@ const Home: FC<Props> = ({ heroText, testimonials }) => {
     <div className={styles.homePage}>
       <SectionHero heroText={heroText} />
 
-      <main>
-        <SectionCallout />
+      <SectionCallout />
 
-        <SectionTestimonials testimonials={testimonials} />
-      </main>
+      <SectionTestimonials testimonials={testimonials} />
     </div>
   )
 }

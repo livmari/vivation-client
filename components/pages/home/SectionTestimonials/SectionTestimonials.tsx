@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import type { FC } from 'react'
-import Image from 'next/image'
 
 import { Blockquote } from '@components/index'
 
@@ -35,13 +34,14 @@ const SectionTestimonials: FC<SectionTestimonialsProps> = ({
   })
 
   return (
-    <section>
-      <Image
-        src={'/images/home3.jpeg'}
-        height={1000}
-        width={1000}
-        alt={'Lakshmi smiling on the beach.'}
-      />
+    <section className={styles.sectionTestimonials}>
+      <div className={styles.imageContainer}>
+        <img
+          src={'/images/home3.jpeg'}
+          alt={'Lakshmi smiling on the beach.'}
+          className={styles.image}
+        />
+      </div>
 
       <Blockquote
         id={'blockquote'}
